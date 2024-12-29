@@ -1,0 +1,758 @@
+my_list=[1, 2, 3, 4, 5]
+my_list.reverse()
+print(my_list)
+
+
+def change (lst):
+if len(lst)<2
+raise valueerror( "В списке должно быть не меньше двух элементов"}
+lst[0], lst[-1]=lst[-1], lst[0]
+my_list=[1, 2, 3, 4, 5]
+change(my_list)
+print(my_list)
+
+
+def to_list(*args):
+return lisy(args)
+result=to_list(1, 2, 3, "hello", true)
+print(result)
+
+
+def useless(s):
+if len(s)==0:
+raise valueerror("Список не может быть пустой")
+max_number=max(s)
+result=max_number/len(s)
+return result
+my_list=[1, 2, 3, 4, 5]
+result=useless(my_list)
+print(result)
+
+
+def list_sort(lst):
+sorted_list=sorted(lst? key=abs? reverse=true)
+return sorted_list
+my_list=[-11, 4, 5, 15, -1]
+result=list_sort(my_list)
+print(result)
+
+
+def all_eq(lst)
+max_length=max(len(s) for s in lst)
+padded_list=[s.ljust(max_length, "_") for s in lst)
+return padded_list
+my_list=["tomato", "apple", "rasberry", "banana"]
+result=all_eq(my_list)
+print(result)
+
+
+def to_float(num):
+try:
+return float(num)
+except(valueerror, typeerror):
+return "Невозможно преобразовать"
+print(to_float(11))
+print(to_float(12,4))
+print(to_float(1, 2, 3))
+print(to_float(Line))
+
+
+def avg_5(a, b, c, d):
+average=(a+b+c+d)/4
+return round(average, 5)
+print(avg_(1, 2, 3, 4))
+print(avg_5(10.12345, 20/54321, 30/98765, 40/13579))
+print(avg_5(-1, 0, 1, 2))
+
+
+def mul_to_int(a, b):
+result=a*b
+if resul.is_integer():
+return int(result)
+else:
+return float(result)
+print(mul_to_int(2, 4))
+print(mul_to_int(2.0, 4))
+print(mul_to_int(2.5, 4))
+print(mul_to_int(0.1, 0.4))
+
+
+import math
+def radius_of_sphere(volume):
+radius=(3*volume/(4*math.pi))**(1/3)
+return radius
+volume=100
+radius=radius_of_sphere(volume)
+print(f"Радиус шара с объёмом{volume} куб. ед.:{radius:.5f}")
+
+
+def dislike_6(a):
+if a==6:
+return "Только не 6!"
+else:
+return True
+print(dislike_6(4))
+print(dislike_6(6))
+print(dislike_6(6.0))
+print(dislike_6(9))
+print(dislike_6(6.2))
+
+
+def help_bool(letter):
+if letter=="к":
+return "Коммуникативность: A or B = B or A и and B =B and A"
+elif letter == "д":
+return "Дистрибутивность: A and (B or C) = (A and B) or (a and C) и A or (B and C) = (A or B) and (A or C)"
+elif letter == "п":
+return "Правило де Моргана: not (A and B)=(not A) or (not B) и not (A or B) = (not A) and (not B)"
+elif letter "а":
+return "Ассоциативность: (A and B) and C=A and (B and C) и (A or B) or C=A or (B or C)"
+else:
+return ("Неверный ввод. Используйте:\n"
+""к"для коммунитативности\"
+""д"для дистрибутивности\"
+""м"для правила де Моргана\"
+""а"для ассоциациативности")
+print(help_bool("к"))
+print(help_bool("д"))
+print(help_bool("м"))
+print(help_bool("а"))
+
+
+def to_dict(lst):
+return{item: item item for item in lst}
+example_list=["apple", "water", "coffe"]
+result = to_dict(example_list)
+print(result)
+
+
+def biggest_dict(**kwargs):
+my_dict={"first_one": "we can do it"}
+my_dict.update(kwargs)
+return my_dict
+result=biggest_dict(key1="value1", key2="value2", key3="value3")
+print(result)
+
+
+def count_it(sequence):
+count_dict={}
+for char in sequence:
+if char.isdigit():
+num=int(char)
+if num in count_dict:
+count_dict[num}+=1
+else:
+count_dict[num]=1
+sorted_counts=sorted(count_dict.items(), key=1ambda item: item[1], reverse=true)
+top_theree=dict(sorted_counts[:3])
+return top_three
+sequence="1234567890123456789012345678901234567890"
+result=count_it(sequence)
+print(result)
+
+
+
+my_dict={
+"first_key": "first_value",
+"second_key": "second_value",
+"third_key": "third_value",
+"fourth_key": "fourt_value",
+"fifth_key": "fifth_value"
+}
+first_key=list(my_dict.keys())[0]
+last_key=list(my_dict.keys())[-1]
+my_dict[first_key], my_dict[last-key] = my_dict[last_key], my_dict[first_key]
+second_key=list(my_dict.keys())[1]
+del my_dict[second_key]
+my-dict["new_key"] = "new_value"
+print(my_dict)
+
+
+def search_substr(subst, st):
+subst_lower = subst.lower()
+st_lower = st.lower()
+if subst_lower in st_lower:
+return "Есть контакт!"
+else:
+return "Мимо!"
+result1 = search_substr("подстрока", "Это пример подтроки")
+print(result1)
+result2 = search_substr("тест", "Это пример")
+print(result2)
+
+
+def first_last(letter, st):
+first_index = st.find(letter)
+if first_index ==-1:
+return (None, None)
+last_index = st.rfind(letter)
+return (first_index, last_index)
+result1 = first_last('a', 'apple')
+print(result1)
+result2 = first_last('z', 'apple')
+print(result2)  
+
+
+def most_common_characters(text):
+cleaned_text = text.replace(" ", "").lower()
+char_counter = Counter(cleaned_text)
+most_common = char_counter.most_common(3)
+return most_common
+text = "Пример текста для анализа символов."
+result = most_common_characters(text)
+print(result) 
+
+
+def top3(st):
+cleaned_text = st.replace(" ", "").lower()
+char_counter = Counter(cleaned_text)
+most_common = char_counter.most_common(3)
+result = ", ".join(f"{char} - {count}" for char, count in most_common)
+return result
+text = "Пример текста для анализа символов."
+result = top3(text)
+print(result) 
+
+
+def camel(st):
+result = []
+for char in st:
+if char.isalpha():
+if upper:
+result.append(char.upper())
+else:
+result.append(char.lower()) 
+upper = not upper 
+else:
+result.append(char)
+return ''.join(result)  
+text = "Привет, сколько тебе лет?"
+result = camel(text)
+print(result)
+
+
+
+def shortener(st):
+stack = []  
+result = []  
+for char in st:
+if char == '(':
+stack.append(len(result)) 
+elif char == ')':
+if stack: 
+stack.pop()  
+continue 
+elif not stack: 
+result.append(char) 
+return ''.join(result) 
+text = "Текст, где (много (очень много) скобок)."
+result = shortener(text)
+print(result)
+
+
+
+def cleaned_str(st):
+result = []
+for char in st:
+if char == '@':
+if result:
+result.pop()
+else:
+result.append(char)
+return ''.join(result)
+text = "гр@оо@лк@оц@ва"
+result = cleaned_str(text)
+print(result)
+
+
+
+def combine_coordinates(x_coords, y_coords):
+return [(x, y) for x, y in zip(x_coords, y_coords)]
+x_coords = [1, 2, 3]
+y_coords = [4, 5, 6]
+result = combine_coordinates(x_coords, y_coords)
+print(result)
+
+
+def greet_guests(guests):
+for guest in guests:
+print(f"Привет, {guest}!")
+guest_list = ["Катя", "Маша", "Саша", "Женя"]
+greet_guests(guest_list)
+
+
+def has_adjacent_duplicates(word):
+for i in range(len(word) - 1):
+if word[i] == word[i + 1]:
+return True
+return False
+print(has_adjacent_duplicates("apple"))
+print(has_adjacent_duplicates("banana"))
+
+
+
+
+def remove_extra_spaces(input_string):
+words = input_string.strip().split()
+return ' '.join(words)
+example_string = "   Привет ,   сколько   деревьев тут?   "
+cleaned_string = remove_extra_spaces(example_string)
+print(cleaned_string)
+
+
+
+def calculate_water_mass(radius, height):
+density_of_water = 1000  
+volume = math.pi * (radius ** 2) * height  
+mass = volume * density_of_water  
+return round(mass, 2)
+radius = 0.5
+height = 1.0
+mass_of_water = calculate_water_mass(radius, height)
+print(mass_of_water)
+
+
+
+
+def multiply_numbers_from_string(input_string):
+numbers = [float(num.strip()) for num in input_string.split(',')]
+product = 1
+for number in numbers:
+product *= number
+return product
+input_string = "3.5, 4.0, 5.0"
+result = multiply_numbers_from_string(input_string)
+print(result)
+
+
+
+
+
+def calculate_total_volume(boxes):
+total_volume = 0
+for box in boxes:
+length, width, height = box
+volume = length * width * height
+total_volume += volume
+return total_volume
+boxes = [
+(3, 4, 5),
+(1, 1, 1),
+(5, 3, 2)
+]
+total_volume = calculate_total_volume(boxes)
+print(total_volume)
+
+
+
+
+def calculate_distance(point_a, point_b):
+x1, y1 = point_a['x'], point_a['y']
+x2, y2 = point_b['x'], point_b['y']
+distance = math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
+return round(distance, 3)
+point_a = {'x': 2, 'y': 1}
+point_b = {'x': 5, 'y': 7}
+distance = calculate_distance(point_a, point_b)
+print(distance)
+
+
+
+
+def encode_to_leet_speak(input_string):
+leet_dict = {
+'e': '3',
+'i': '1',
+'o': '0',
+'s': '5',
+'t': '7'
+}
+encoded_string = ''
+for char in input_string:
+if char.lower() in leet_dict:
+encoded_string += leet_dict[char.lower()]
+else:
+encoded_string += char
+return encoded_string
+input_str = "Hello, this is apple."
+encoded_str = encode_to_leet_speak(input_str)
+print(encoded_str)
+
+
+
+
+def cumulative_sum(numbers):
+result = []
+total = 0
+for number in numbers:
+total += number
+result.append(total)
+return result
+input_numbers = [1, 2, 3, 4, 5]
+output_array = cumulative_sum(input_numbers)
+print(output_array)
+
+
+
+
+def are_numbers_increasing(numbers):
+if len(numbers) < 2:
+return True
+for i in range(len(numbers) - 1):
+if numbers[i] >= numbers[i + 1]:
+return False
+return True
+input_array = [1, 2, 3, 4, 5]
+result = are_numbers_increasing(input_array)
+print(result)input_array2 = [1, 3, 2, 4, 5]
+result2 = are_numbers_increasing(input_array2)
+print(result2)
+
+
+
+
+def calculate_median(numbers):
+sorted_numbers = sorted(numbers)
+n = len(sorted_numbers)
+if n % 2 == 1:
+median = sorted_numbers[n // 2]
+else:
+median = (sorted_numbers[n // 2 - 1] + sorted_numbers[n // 2]) / 2
+return median
+input_array = [3, 1, 4, 2, 5]
+median_result = calculate_median(input_array)
+print(median_result)
+input_array2 = [1, 2, 3, 4]
+median_result2 = calculate_median(input_array2)
+print(median_result2)
+
+
+
+def button_presses(message):
+presses = {
+'A': 1, 'B': 2, 'C': 3, 'D': 4, 'E': 5,
+'K': 11, 'L': 12, 'M': 13, 'N': 14, 'O': 15,
+'P': 16, 'Q': 17, 'R': 18, 'S': 19, 'T': 20,
+'U': 21, 'V': 22, 'W': 23, 'X': 24, 'Y': 25, 'Z': 26,
+' ': 0
+}
+result = []
+for char in message.upper():
+if char in presses:
+result.append(presses[char])
+else:
+raise ValueError(f"Character '{char}' is not supported.")
+return result
+message = "HELLO"
+press_sequence = button_presses(message)
+print(press_sequence)
+
+
+
+
+
+def reverse_and_swap_case(input_string):
+reversed_string = input_string[::-1]
+swapped_case_string = reversed_string.swapcase()
+return swapped_case_string
+input_str = "Hello, World!"
+result = reverse_and_swap_case(input_str)
+print(result) 
+
+
+
+
+def remove_enemies(names, enemies):
+return [name for name in names if name not in enemies]
+names_list = ["Alice", "Alex", "Josh", "Eva"]
+enemies_list = ["Alice", "Eva"]
+filtered_names = remove_enemies(names_list, enemies_list)
+print(filtered_names)
+
+
+
+
+
+def rock_paper_scissors(player1, player2):
+player1 = player1.lower()
+player2 = player2.lower()
+if player1 == player2:
+return "Ничья!"
+elif (player1 == "камень" and player2 == "ножницы") or \
+(player1 == "ножницы" and player2 == "бумага") or \
+(player1 == "бумага" and player2 == "камень"):
+return "Игрок 1 выиграл!"
+else:
+return "Игрок 2 выиграл!"
+result = rock_paper_scissors("Камень", "Ножницы")
+print(result) 
+
+
+
+
+
+
+def can_distribute_evenly(coins):
+total_coins = sum(coins)
+return total_coins % 3 == 0
+coins_array = [1, 2, 3, 4, 5]
+result = can_distribute_evenly(coins_array)
+print(result)
+coins_array = [1, 2, 3, 4]
+result = can_distribute_evenly(coins_array)
+print(result)
+
+
+
+
+
+
+def replace_end_punctuation(text):
+text = text.rstrip()
+while text.endswith('?') or text.endswith('!'):
+text = text[:-1]
+if text.endswith('.'):
+return text
+elif text.endswith(''):
+return text
+else:
+return text + '?' if '?' in text else text + '!'
+print(replace_end_punctuation("Как ты???"))
+print(replace_end_punctuation("Чудесно!!!"))
+print(replace_end_punctuation("Все хорошо???!!!"))
+print(replace_end_punctuation("Привет! ")) 
+
+
+
+
+def is_bust(card_values):
+total = sum(card_values)
+return total > 21  
+print(is_bust([10, 5, 7])) 
+print(is_bust([10, 5, 6])) 
+print(is_bust([11, 9, 2]))   
+print(is_bust([1, 2, 3]))  
+print(is_bust([10, 10, 2]))  
+
+
+
+def sum_of_numbers_in_string(s):
+total = 0
+current_number = ''
+for char in s:
+if char.isdigit(): 
+current_number += char  
+else:
+if current_number:  
+total += int(current_number)  
+current_number = '' 
+if current_number:
+total += int(current_number)
+return total
+print(sum_of_numbers_in_string("abc123def456"))  
+print(sum_of_numbers_in_string("a1b2c3"))       
+print(sum_of_numbers_in_string("no digits here")) 
+print(sum_of_numbers_in_string("1a2b3c4"))      
+print(sum_of_numbers_in_string("abc12def34gh56")) 
+
+
+
+
+
+def is_surrounded_by_plus(s):
+if len(s) < 3:
+return False 
+for i in range(1, len(s) - 1): 
+if s[i].isalpha():
+if s[i - 1] != '+' or s[i + 1] != '+':
+return False
+return True 
+print(is_surrounded_by_plus("+a+b+c+")) 
+print(is_surrounded_by_plus("+a+b+c"))   
+print(is_surrounded_by_plus("++a++"))    
+print(is_surrounded_by_plus("+a+"))      
+print(is_surrounded_by_plus("a+b+c"))    
+print(is_surrounded_by_plus("+"))        
+
+
+
+
+
+
+
+def convert_time(time_str):
+if 'AM' in time_str or 'PM' in time_str:
+time_parts = time_str[:-2].strip().split(':')
+hours = int(time_parts[0])
+if time_str.endswith('AM'):
+if hours == 12:
+hours = 0 
+else:
+if hours != 12:
+hours += 12 
+return f"{hours:02}:{minutes:02}"  
+else:
+time_parts = time_str.strip().split(':')
+hours = int(time_parts[0])
+minutes = int(time_parts[1])
+if hours == 0:
+return f"12:{minutes:02} AM" 
+elif hours < 12:
+return f"{hours}:{minutes:02} AM"
+elif hours == 12:
+return f"{hours}:{minutes:02} PM"
+else:
+return f"{hours - 12}:{minutes:02} PM" 
+print(convert_time("02:30 PM"))  
+print(convert_time("12:45 AM")) 
+print(convert_time("00:15"))    
+print(convert_time("13:00"))     
+print(convert_time("12:00 PM"))  
+print(convert_time("11:59 PM"))  
+
+
+
+
+
+
+
+
+def password_strength(password):
+score = 0
+if len(password) >= 8:
+score += 1 
+if any(char.isdigit() for char in password):
+score += 1
+if any(char.islower() for char in password):
+score += 1 
+if any(char.isupper() for char in password):
+score += 1 
+if any(char in "!@#$%^&*()-_=+[]{};:'\",.<>?/" for char in password):
+score += 1  
+return score
+print(password_strength("Password123"))
+print(password_strength("12345678")) 
+print(password_strength("P@ssw0rd"))    
+print(password_strength("short"))      
+print(password_strength("LongPassword"))  
+
+
+
+
+
+
+
+def number_to_russian(n):
+if not (0 <= n <= 999):
+raise ValueError("Число должно быть от 0 до 999")
+units = [
+"", "один", "два", "три", "четыре", 
+"пять", "шесть", "семь", "восемь", "девять"
+]
+teens = [
+"десять", "одиннадцать", "двенадцать", "тринадцать", 
+"четырнадцать", "пятнадцать", "шестнадцать", 
+"семнадцать", "восемнадцать", "девятнадцать"
+]
+tens = [
+"", "десять", "двадцать", "тридцать", 
+"сорок", "пятьдесят", "шестьдесят", 
+"семьдесят", "восемьдесят", "девяносто"
+]
+hundreds = [
+"", "сто", "двести", "триста", 
+"четыреста", "пятьсот", "шестьсот", 
+"семьсот", "восемьсот", "девятьсот"
+]
+if n == 0:
+return "ноль"
+result = []
+h = n // 100
+t = (n // 10) % 10
+u = n % 10
+if h > 0:
+result.append(hundreds[h])
+if t == 1 and u > 0: 
+result.append(teens[u])
+else:
+if t > 0:
+result.append(tens[t])
+if u > 0:
+result.append(units[u])
+return ' '.join(result).strip()
+print(number_to_russian(0))   
+print(number_to_russian(5)) 
+print(number_to_russian(10))   
+print(number_to_russian(21))  
+print(number_to_russian(99))  
+print(number_to_russian(100)) 
+print(number_to_russian(256)) 
+print(number_to_russian(999))  
+
+
+
+
+
+
+
+def count_lucky_numbers(n):
+if n % 2 != 0:
+return 0 
+half_length = n // 2
+max_digit_sum = 9 * half_length 
+dp = [0] * (max_digit_sum + 1)
+dp[0] = 1  
+for digit in range(10):
+for sum_value in range(max_digit_sum, digit - 1, -1):
+dp[sum_value] += dp[sum_value - digit]
+count = 0
+for sum_value in range(max_digit_sum + 1):
+count += dp[sum_value] ** 2  
+return count
+print(count_lucky_numbers(2)) 
+print(count_lucky_numbers(4)) 
+print(count_lucky_numbers(6)) 
+print(count_lucky_numbers(3)) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
